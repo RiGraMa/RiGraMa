@@ -2,7 +2,7 @@
  
 BSc (Hons) Computer Science graduate from the University of Sunderland, based in Sunderland, UK.
  
-I build Python tools and cloud infrastructure that solve real problems — from web apps and database pipelines to AWS deployments and self-hosted monitoring. I like projects that go all the way from design through to a live, working deployment.
+I build Python tools and cloud infrastructure that solve real problems, from web apps and database pipelines to AWS deployments and self-hosted monitoring. I like projects that go all the way from design through to a live, working deployment.
  
 ---
  
@@ -26,7 +26,7 @@ I build Python tools and cloud infrastructure that solve real problems — from 
  
 ## 🚀 Projects
  
-### [AWS Cloud Infrastructure & Observability](https://github.com/RiGraMa) — Live
+### [AWS Cloud Infrastructure & Observability](https://github.com/RiGraMa) — Live `rochasbirthday.xyz`
 A self-hosted monitoring stack deployed and secured on AWS from the ground up.
  
 **What it does:**
