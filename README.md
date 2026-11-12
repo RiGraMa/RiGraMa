@@ -41,20 +41,24 @@ A self-hosted monitoring stack deployed and secured on AWS from the ground up.
 ---
  
 ### [DeckMaster](https://github.com/RiGraMa/deckMaster)
-A Python toolkit for Magic: The Gathering players — a passion project that grew into a multi-tool application demonstrating real software engineering practices.
- 
+
+A Python/Flask toolkit for Magic: The Gathering players. I built it to compare Commander decklists against my own card collection, and it grew into a small multi-tool project.
+
 **What it does:**
+
 - Scrapes average Commander decklists from EDHREC
-- Migrates ManaBox CSV exports into a normalised SQLite collection database
-- Cross-references any decklist against your personal collection
-- Analyses the competitive metagame across multiple formats (Pauper, Modern, Vintage) via MTGGoldfish, with local caching to avoid redundant downloads
-- Flask web interface with Scryfall API integration to visually browse decklists, showing owned and missing cards with live card images
+- Imports ManaBox CSV exports into a SQLite collection database
+- Cross-references any decklist against your collection to show owned and missing cards
+- Flask web interface with Scryfall API integration to browse decks with live card images
+- Copy/download buttons for decklists in Moxfield/ManaBox-compatible text format
+
 **Technical highlights:**
-- Modular Flask blueprint architecture with a shared, normalised database layer
-- Reverse-engineered a site's embedded JSON after a structural change to keep the scraper working
+
+- Modular Flask blueprint structure with a shared database layer
+- EDHREC changed its JSON format twice, so I extracted a single shared parser (`parse_edhrec_deck()`) that handles both formats and is the only place to update next time
 - Rate-limit-aware Scryfall API integration
-- Containerised with Docker, docker-compose and Gunicorn, running on a 3-job GitHub Actions CI pipeline
----
+- Containerised with Docker, docker-compose and Gunicorn, with a GitHub Actions CI pipeline
+- A metagame analysis tool for other formats is parked: the original source blocked scraping, and my rewrite is unfinished
  
 ### [Active Directory Home Lab](https://github.com/RiGraMa)
 A hands-on enterprise infrastructure environment built from scratch.
